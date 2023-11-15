@@ -14,6 +14,7 @@
             color: #fff;
             min-height: 100vh;
             overflow: hidden;
+            position: relative; /* Added position relative */
         }
 
         header {
@@ -89,6 +90,22 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+            display: flex;
+            justify-content: space-between; /* Added to distribute items evenly */
+            align-items: center; /* Align items vertically in the center */
+            padding-right: 10px; /* Add some space to the right */
+        }
+
+        footer a {
+            color: #a0a0a0;
+            text-decoration: none;
+            display: flex;
+            align-items: center; /* Align items vertically in the center */
+        }
+
+        footer img {
+            width: 25px; /* Adjust the width as needed */
+            margin-right: 5px; /* Add some space between the icon and text */
         }
     </style>
 </head>
@@ -116,7 +133,10 @@
     </main>
 
     <footer>
-        <p>&copy; 2023 Idk why i added this</p>
+        <a href="https://discord.gg/6GHQjzZ369" target="_blank">
+            <img src="discord-icon.png" alt="Discord Icon">
+            Join our Discord Server
+        </a>
     </footer>
 
     <script>
