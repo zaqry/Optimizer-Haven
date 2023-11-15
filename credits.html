@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Optimizer Haven</title>
+    <title>Optimizer Haven - Credits</title>
     <style>
         /* Your styles here */
         body {
@@ -69,10 +69,9 @@
             color: #fff;
             cursor: pointer;
             display: block;
-            padding: 10px;
+            padding: 5px 10px; /* Adjusted padding */
             border: none;
             border-radius: 5px;
-            width: 100%; /* Make buttons full-width */
         }
 
         .about-section {
@@ -107,7 +106,9 @@
             width: 25px; /* Adjust the width as needed */
             margin-right: 5px; /* Add some space between the icon and text */
         }
-        
+
+        /* Additional styles for the small button in the top right corner */
+
     </style>
 </head>
 <body>
@@ -119,18 +120,18 @@
 
     <main>
         <section class="about-section">
-            <h2>Welcome to Optimizer Haven</h2>
+            <h2>Credits Page</h2>
             <p>
-                At Optimizer Haven, we are dedicated to enhancing your computing experience. 
-                We utilize a suite of powerful optimization tools to boost your computer's performance, 
-                ensuring faster gaming, improved workspace efficiency, and more!
+            <br>
+                CoutX:UnLovedCookie</p>
+                CoutX:UnLovedCookie</p>
+                CoutX:UnLovedCookie</p>
+            </br>
             </p>
-            <button id="downloadButton" onclick="promptBeforeDownload('https://github.com/UnLovedCookie/CoutX/releases/download/2.1.0/CoutX-Setup.exe')">Download CoutX Setup</button>
-            <button id="downloadButton" onclick="promptBeforeDownload('https://download.overwolf.com/install/Download?ExtensionId=mgkabooemhaamambocobpeoeelpadcjhjgbcfhlc')">Download hone.gg Setup</button>
-            <button id="downloadButton" onclick="promptBeforeDownload('https://github.com/hellzerg/optimizer/releases/download/16.2/Optimizer-16.2.exe')">Download Optimizer 16.2</button>
+            <button id="indexButton" onclick="location.href='index.html'">Go to Home</button>
         </section>
-
-        <button id="CreditsButton" onclick="location.href='credits.html'">Go to Credits</button>
+        
+        
 
     </main>
 
@@ -140,26 +141,5 @@
             Join our Discord Server
         </a>
     </footer>
-
-    <script>
-        function promptBeforeDownload(downloadLink) {
-            // Display a confirmation prompt
-            const userResponse = confirm('Create a restore point before running the optimizer is recommended. Do you want to proceed with the download?');
-
-            // If the user confirms, initiate the download
-            if (userResponse) {
-                // Simulating a file download
-                // In a real scenario, you would need server-side logic for this part
-                const downloadLinkElement = document.createElement('a');
-                downloadLinkElement.href = downloadLink;
-                downloadLinkElement.download = downloadLink.split('/').pop(); // Extract the filename from the URL
-                document.body.appendChild(downloadLinkElement);
-                downloadLinkElement.click();
-                document.body.removeChild(downloadLinkElement);
-            } else {
-                alert('Download canceled.');
-            }
-        }
-    </script>
 </body>
 </html>
