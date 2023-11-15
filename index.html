@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimizer Haven</title>
+    <style>
+        /* Your styles here */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #041a31, rgb(30, 0, 78));
+            color: #fff;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(to right, #000000, rgb(41, 5, 99));
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            display: flex;
+            align-items: center; /* Align items vertically in the center */
+        }
+
+        header img {
+            width: 40px; /* Adjust the width as needed */
+            margin-right: 10px; /* Add some space between the logo and text */
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: linear-gradient(to right, #222222, #30007c);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+            height: calc(100vh - 162px);
+        }
+
+        section {
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out; /* Added transition property */
+        }
+
+        section:hover {
+            transform: perspective(500px) rotateY(2deg); /* Adjusted rotateY value */
+        }
+
+        h2 {
+            color: #a0a0a0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, button {
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            background: linear-gradient(to right, #673ab7, #512da8);
+            color: #fff;
+            cursor: pointer;
+            display: block;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%; /* Make buttons full-width */
+        }
+
+        .about-section {
+            background: linear-gradient(to right, #080808, #501d8b);
+            color: #a0a0a0;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em;
+            background: linear-gradient(to right, #080808, #501d8b);
+            color: #a0a0a0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Optimizer Haven Logo">
+        <h1>Optimizer Haven</h1>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <h2>Welcome to Optimizer Haven</h2>
+            <p>
+                At Optimizer Haven, we are dedicated to enhancing your computing experience. 
+                We utilize a suite of powerful optimization tools to boost your computer's performance, 
+                ensuring faster gaming, improved workspace efficiency, and more!
+            </p>
+            <button id="downloadButton" onclick="promptBeforeDownload('https://github.com/UnLovedCookie/CoutX/releases/download/2.1.0/CoutX-Setup.exe')">Download CoutX Setup</button>
+            <button id="downloadButton" onclick="promptBeforeDownload('https://download.overwolf.com/install/Download?ExtensionId=mgkabooemhaamambocobpeoeelpadcjhjgbcfhlc')">Download hone.gg Setup</button>
+            <button id="downloadButton" onclick="promptBeforeDownload('https://github.com/hellzerg/optimizer/releases/download/16.2/Optimizer-16.2.exe')">Download Optimizer 16.2</button>
+        </section>
+
+        <!-- Your other sections can go here -->
+
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Idk why i added this</p>
+    </footer>
+
+    <script>
+        function promptBeforeDownload(downloadLink) {
+            // Display a confirmation prompt
+            const userResponse = confirm('Create a restore point before running the optimizer is recommended. Do you want to proceed with the download?');
+
+            // If the user confirms, initiate the download
+            if (userResponse) {
+                // Simulating a file download
+                // In a real scenario, you would need server-side logic for this part
+                const downloadLinkElement = document.createElement('a');
+                downloadLinkElement.href = downloadLink;
+                downloadLinkElement.download = downloadLink.split('/').pop(); // Extract the filename from the URL
+                document.body.appendChild(downloadLinkElement);
+                downloadLinkElement.click();
+                document.body.removeChild(downloadLinkElement);
+            } else {
+                alert('Download canceled.');
+            }
+        }
+    </script>
+</body>
+</html>
