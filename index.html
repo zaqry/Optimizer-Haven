@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Optimizer Haven</title>
     <style>
-        /* Your styles here */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
@@ -14,7 +13,7 @@
             color: #fff;
             min-height: 100vh;
             overflow: hidden;
-            position: relative; /* Added position relative */
+            position: relative;
         }
 
         header {
@@ -23,12 +22,12 @@
             text-align: center;
             padding: 1em;
             display: flex;
-            align-items: center; /* Align items vertically in the center */
+            align-items: center;
         }
 
         header img {
-            width: 40px; /* Adjust the width as needed */
-            margin-right: 10px; /* Add some space between the logo and text */
+            width: 40px;
+            margin-right: 10px;
         }
 
         main {
@@ -43,11 +42,11 @@
 
         section {
             margin-bottom: 20px;
-            transition: transform 0.3s ease-in-out; /* Added transition property */
+            transition: transform 0.3s ease-in-out;
         }
 
         section:hover {
-            transform: perspective(500px) rotateY(2deg); /* Adjusted rotateY value */
+            transform: perspective(500px) rotateY(2deg);
         }
 
         h2 {
@@ -72,7 +71,7 @@
             padding: 10px;
             border: none;
             border-radius: 5px;
-            width: 100%; /* Make buttons full-width */
+            width: 100%;
         }
 
         .about-section {
@@ -91,21 +90,21 @@
             bottom: 0;
             width: 100%;
             display: flex;
-            justify-content: space-between; /* Added to distribute items evenly */
-            align-items: center; /* Align items vertically in the center */
-            padding-right: 10px; /* Add some space to the right */
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 10px;
         }
 
         footer a {
             color: #a0a0a0;
             text-decoration: none;
             display: flex;
-            align-items: center; /* Align items vertically in the center */
+            align-items: center;
         }
 
         footer img {
-            width: 25px; /* Adjust the width as needed */
-            margin-right: 5px; /* Add some space between the icon and text */
+            width: 25px;
+            margin-right: 5px;
         }
         
     </style>
@@ -135,7 +134,7 @@
     </main>
 
     <footer>
-        <a href="https://discord.gg/6GHQjzZ369" target="_blank">
+        <a href="https://discord.gg/5WYAYKjT9j" target="_blank">
             <img src="discord-icon.png" alt="Discord Icon">
             Join our Discord Server
         </a>
@@ -143,13 +142,9 @@
 
     <script>
         function promptBeforeDownload(downloadLink) {
-            // Display a confirmation prompt
             const userResponse = confirm('Create a restore point before running the optimizer is recommended. Do you want to proceed with the download?');
-
-            // If the user confirms, initiate the download
+            
             if (userResponse) {
-                // Simulating a file download
-                // In a real scenario, you would need server-side logic for this part
                 const downloadLinkElement = document.createElement('a');
                 downloadLinkElement.href = downloadLink;
                 downloadLinkElement.download = downloadLink.split('/').pop(); // Extract the filename from the URL
